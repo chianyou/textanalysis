@@ -2,8 +2,8 @@ from azure.ai.textanalytics import TextAnalyticsClient
 from azure.core.credentials import AzureKeyCredential
 
 # Azure Text Analytics 服務的金鑰和端點
-TA_KEY = '5f45af0393fe4f53aced90f416202e30'
-TA_ENDPOINT = 'https://analysis10317.cognitiveservices.azure.com/'
+TA_KEY = '金鑰'
+TA_ENDPOINT = '端點'
 
 def analyze_text(text):
     ta_client = TextAnalyticsClient(endpoint=TA_ENDPOINT, credential=AzureKeyCredential(TA_KEY))
