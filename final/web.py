@@ -5,13 +5,13 @@ from azure.ai.translation.text import TextTranslationClient, TranslatorCredentia
 from azure.ai.translation.text.models import InputTextItem
 
 # Azure Text Analytics 服務的金鑰和端點
-TA_KEY = '5f45af0393fe4f53aced90f416202e30'
-TA_ENDPOINT = 'https://analysis10317.cognitiveservices.azure.com/'
+TA_KEY = '金鑰'
+TA_ENDPOINT = '端點'
 
 # Azure 翻譯服務的金鑰、位置和端點
-T_KEY = '48e9fd120ac34d0e8fa8ca91172055ee'
-T_REGION = 'eastus2'
-T_ENDPOINT = 'https://api.cognitive.microsofttranslator.com/'
+T_KEY = '金鑰'
+T_REGION = '地區位置'
+T_ENDPOINT = '端點'
 
 app = Flask(__name__)
 
