@@ -1,4 +1,6 @@
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,18 +15,24 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
+            background-color: black; /* 將背景色設置為黑色 */
+            color: white; /* 將文字顏色設置為白色 */
         }
         form {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        label, textarea, input {
+        label, textarea, input, button {
             margin-bottom: 10px;
             text-align: center;
+            color: black; /* 修改文字顏色為黑色 */
         }
         .button {
             margin-top: 10px;
+        }
+        .button button[type="submit"] {
+            color: black; /* 將開始分析按鈕的文字顏色設置為黑色 */
         }
     </style>
 </head>
@@ -32,8 +40,8 @@
     <h1>文字情感分析</h1>
     <form method="post" action="/">
         <label for="text">輸入文字進行分析:</label><br>
-        <textarea id="text" name="text" rows="4" cols="50"></textarea><br><br>
-        <input type="submit" value="開始分析">
+        <textarea id="text" name="text" rows="4" cols="50" style="color: black;"></textarea><br><br>
+        <button type="submit">開始分析</button>
     </form>
     <button class="button" onclick="window.location.href='/'">返回</button>
     {% if error %}
@@ -49,6 +57,9 @@
     {% endif %}
 </body>
 </html>
+
+
+
 
 
 
