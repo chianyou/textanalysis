@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字情感分析</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label, textarea, input {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>文字情感分析</h1>
+    <form method="post" action="/">
+        <label for="text">輸入文字進行分析:</label><br>
+        <textarea id="text" name="text" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="開始分析">
+    </form>
+    <button class="button" onclick="window.location.href='/'">返回</button>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    {% if original_text %}
+        <!-- <h2>Original Text:</h2>
+        <p>{{ original_text }}</p> -->
+        <h2>文字情感:</h2>
+        <p>{{ sentiment }}</p>
+        <h2>文字情感(中文):</h2>
+        <p>{{ translated_sentiment }}</p>
+    {% endif %}
+</body>
+</html>
+
+
+
